@@ -1,0 +1,2420 @@
+[gd_scene load_steps=65 format=1]
+
+[ext_resource path="res://scene/Main.gd" type="Script" id=1]
+[ext_resource path="res://asset/bg.png" type="Texture" id=2]
+[ext_resource path="res://asset/levelhold.png" type="Texture" id=3]
+[ext_resource path="res://font/Crasns.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://asset/pb1u.png" type="Texture" id=5]
+[ext_resource path="res://asset/pb1b.png" type="Texture" id=6]
+[ext_resource path="res://asset/score.png" type="Texture" id=7]
+[ext_resource path="res://image/starcolor.png" type="Texture" id=8]
+[ext_resource path="res://asset/upperpart22.png" type="Texture" id=9]
+[ext_resource path="res://asset/pb2u.png" type="Texture" id=10]
+[ext_resource path="res://asset/pb2b.png" type="Texture" id=11]
+[ext_resource path="res://asset/timer.png" type="Texture" id=12]
+[ext_resource path="res://asset/question holder.png" type="Texture" id=13]
+[ext_resource path="res://asset/coinholder.png" type="Texture" id=14]
+[ext_resource path="res://asset/coinhold.png" type="Texture" id=15]
+[ext_resource path="res://asset/answerhold.png" type="Texture" id=16]
+[ext_resource path="res://asset/correctsign.png" type="Texture" id=17]
+[ext_resource path="res://asset/crosssign.png" type="Texture" id=18]
+[ext_resource path="res://asset/coin.png" type="Texture" id=19]
+[ext_resource path="res://font/Lobster_1.3.otf" type="DynamicFontData" id=20]
+[ext_resource path="res://asset/nextq.png" type="Texture" id=21]
+[ext_resource path="res://asset/whatsappsign.png" type="Texture" id=22]
+[ext_resource path="res://scene/share_btn.gd" type="Script" id=23]
+[ext_resource path="res://asset/audience.png" type="Texture" id=24]
+[ext_resource path="res://asset/5050.png" type="Texture" id=25]
+[ext_resource path="res://asset/rateusmin.png" type="Texture" id=26]
+[ext_resource path="res://asset/skiplevel.png" type="Texture" id=27]
+[ext_resource path="res://asset/settingbtn.png" type="Texture" id=28]
+[ext_resource path="res://scene/admob.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scene/mainui.tscn" type="PackedScene" id=30]
+[ext_resource path="res://asset/earncoinin.png" type="Texture" id=31]
+[ext_resource path="res://asset/holderrank.png" type="Texture" id=32]
+[ext_resource path="res://asset/pay.png" type="Texture" id=33]
+[ext_resource path="res://scene/popupearn.tscn" type="PackedScene" id=34]
+[ext_resource path="res://asset/next.png" type="Texture" id=35]
+[ext_resource path="res://scene/menuin.tscn" type="PackedScene" id=36]
+[ext_resource path="res://asset/home.png" type="Texture" id=37]
+[ext_resource path="res://scene/levelinfo.tscn" type="PackedScene" id=38]
+[ext_resource path="res://scene/sentencemode.tscn" type="PackedScene" id=39]
+[ext_resource path="res://asset/holder.png" type="Texture" id=40]
+[ext_resource path="res://scene/AnimationPlayer.tscn" type="PackedScene" id=41]
+[ext_resource path="res://asset/learn mode.png" type="Texture" id=42]
+[ext_resource path="res://asset/game mode.png" type="Texture" id=43]
+[ext_resource path="res://asset/sentencemode.png" type="Texture" id=44]
+[ext_resource path="res://asset/video.png" type="Texture" id=45]
+[ext_resource path="res://scene/guide.tscn" type="PackedScene" id=46]
+[ext_resource path="res://ConfirmationDialog.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Node2D1.tscn" type="PackedScene" id=48]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 70
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -49, 0.5 ), Vector2( 1, 0.5 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 5 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 2.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 6 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 10 )
+margin/left = 14.0
+margin/right = 0.0
+margin/top = 10.0
+margin/bottom = 10.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 11 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="Animation" id=7]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 30
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="Animation" id=9]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="DynamicFont" id=10]
+
+font/size = 28
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 20 )
+
+[sub_resource type="Animation" id=11]
+
+length = 0.5
+loop = false
+step = 0.1
+
+[sub_resource type="DynamicFont" id=12]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 20 )
+
+[sub_resource type="DynamicFont" id=13]
+
+font/size = 35
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 20 )
+
+[sub_resource type="Animation" id=14]
+
+resource/name = "New Anim"
+length = 0.6
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("video:transform/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.55 ), Vector2( 0.46, 0.5 ), Vector2( 0.5, 0.55 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.1, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ansbox:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("down:visibility/visible")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("qbox:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="ColorRamp" id=16]
+
+offsets = FloatArray( 0, 0.0350877, 0.0643275, 0.0994152, 0.140351, 0.210526, 0.280702, 0.526316, 0.625731, 0.923977, 0.959064, 1 )
+colors = ColorArray( 0.949219, 0.743431, 0.126068, 1, 0.976563, 0.544012, 0.038147, 1, 0.722656, 0.691957, 0.231476, 1, 0.961042, 0.585821, 0.0583225, 1, 0.882414, 0.951165, 0.0711616, 1, 0.934233, 0.658036, 0.0931713, 1, 0.234246, 0.917301, 0.115181, 1, 0.858039, 0.863281, 0.192215, 1, 0.36175, 0.891975, 0.643432, 1, 0.977216, 0.978058, 0.870355, 1, 0.210526, 0.738281, 0.231141, 1, 1, 1, 1, 1 )
+
+[node name="main" type="Node2D"]
+
+visibility/opacity = 0.1
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+texture = ExtResource( 2 )
+centered = false
+
+[node name="level" type="Sprite" parent="."]
+
+transform/pos = Vector2( -1, 0.5 )
+transform/scale = Vector2( 0.55, 0.5 )
+z/z = -5
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Label" type="Label" parent="level"]
+
+rect/scale = Vector2( 0.35, 0.35 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4.0
+margin/top = 24.0
+margin/right = 109.0
+margin/bottom = 95.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.414063, 0.317421, 0.0274963, 1 )
+text = "1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="level"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="upper" type="Node2D" parent="."]
+
+transform/pos = Vector2( -9, -5 )
+
+[node name="scorebar" type="Node2D" parent="upper"]
+
+transform/pos = Vector2( -1, 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="upper/scorebar"]
+
+rect/scale = Vector2( 0.54, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 42.0
+margin/top = 8.0
+margin/right = 313.0
+margin/bottom = 51.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+range/min = 0.0
+range/max = 100.0
+range/step = 0.0
+range/page = 0.0
+range/value = 10.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = false
+
+[node name="Sprite" type="Sprite" parent="upper/scorebar"]
+
+transform/pos = Vector2( 47, 19 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="Label1" type="Label" parent="upper/scorebar"]
+
+rect/scale = Vector2( 0.2, 0.2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 40.0
+margin/top = 10.0
+margin/right = 110.0
+margin/bottom = 81.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.320313, 0.265884, 0.1026, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="star1" type="Node2D" parent="upper/scorebar"]
+
+editor/display_folded = true
+transform/pos = Vector2( 107.5, 11 )
+
+[node name="Sprite" type="Sprite" parent="upper/scorebar/star1"]
+
+transform/scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 8 )
+
+[node name="star2" type="Node2D" parent="upper/scorebar"]
+
+editor/display_folded = true
+transform/pos = Vector2( 129.5, 10.5 )
+
+[node name="Sprite" type="Sprite" parent="upper/scorebar/star2"]
+
+transform/scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 8 )
+
+[node name="Sprite1" type="Sprite" parent="upper/scorebar/star2"]
+
+transform/pos = Vector2( 6.5, -1.5 )
+transform/scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 8 )
+
+[node name="star3" type="Node2D" parent="upper/scorebar"]
+
+transform/pos = Vector2( 152.5, 9.5 )
+
+[node name="Sprite" type="Sprite" parent="upper/scorebar/star3"]
+
+transform/pos = Vector2( 2, 0 )
+transform/scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="upper/scorebar/star3"]
+
+transform/pos = Vector2( 10.5, 0 )
+transform/scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 8 )
+
+[node name="Sprite1" type="Sprite" parent="upper/scorebar/star3"]
+
+transform/pos = Vector2( 6.5, -2.5 )
+transform/scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 8 )
+
+[node name="uperpart1" type="Sprite" parent="upper"]
+
+transform/pos = Vector2( 205, 3.5 )
+transform/scale = Vector2( 0.6, 0.6 )
+z/z = -5
+texture = ExtResource( 9 )
+centered = false
+
+[node name="ProgressBar" type="ProgressBar" parent="upper"]
+
+rect/scale = Vector2( 0.5, 0.3 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 45.0
+margin/top = 27.0
+margin/right = 306.0
+margin/bottom = 100.0
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+range/min = 0.0
+range/max = 100.0
+range/step = 0.0
+range/page = 0.0
+range/value = 100.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = false
+
+[node name="uperpart2" type="Sprite" parent="upper"]
+
+transform/pos = Vector2( 30.5, 21.5 )
+transform/scale = Vector2( 0.52, 0.52 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="Label" type="Label" parent="upper/uperpart2"]
+
+rect/scale = Vector2( 0.44, 0.44 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 16.0
+margin/right = 88.0
+margin/bottom = 87.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.320313, 0.265884, 0.1026, 1 )
+text = "20"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="qbox" type="Node2D" parent="."]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 113, 110 )
+transform/rot = -0.0512572
+
+[node name="box" type="Sprite" parent="qbox"]
+
+transform/pos = Vector2( 0, 8 )
+transform/scale = Vector2( 0.47, 0.5 )
+z/z = -5
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="qbox"]
+
+rect/rotation = 0.873477
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -93.0
+margin/top = -39.0
+margin/right = 272.0
+margin/bottom = 161.0
+custom_colors/font_color = Color( 0.0585938, 0.029068, 0.029068, 1 )
+text = "what is your first name and what about last
+"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="qbox"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim (2)" = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Coin" type="Node2D" parent="."]
+
+transform/pos = Vector2( 181.5, -20.5 )
+
+[node name="Sprite1" type="Sprite" parent="Coin"]
+
+transform/pos = Vector2( 6, 52 )
+transform/scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Coin"]
+
+transform/pos = Vector2( 12, 38 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="Coin"]
+
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -9.0
+margin/top = 47.0
+margin/right = 66.0
+margin/bottom = 112.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.3125, 0.289841, 0.0488281, 1 )
+text = "0"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ansbox" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 2, -5 )
+transform/rot = 0.446381
+
+[node name="q1" type="Node2D" parent="ansbox"]
+
+transform/pos = Vector2( 20, 204 )
+
+[node name="btnq1" type="TouchScreenButton" parent="ansbox/q1"]
+
+transform/pos = Vector2( -10.3379, -7.48888 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 16 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Label" type="Label" parent="ansbox/q1"]
+
+rect/rotation = 0.842032
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 4.0
+margin/top = -4.0
+margin/right = 352.0
+margin/bottom = 53.0
+custom_colors/font_color = Color( 0.0358353, 0.0429688, 0.0322266, 1 )
+text = "hi are you fine you must "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ansbox/q1"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 9 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="pos" type="Node2D" parent="ansbox/q1"]
+
+transform/pos = Vector2( -0.99032, -0.138901 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="right" type="Sprite" parent="ansbox/q1/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 13.7255, 2.9346 )
+texture = ExtResource( 17 )
+
+[node name="wrong" type="Sprite" parent="ansbox/q1/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 340.174, 2.98832 )
+texture = ExtResource( 18 )
+
+[node name="coinparticle" type="Node2D" parent="ansbox/q1"]
+
+transform/pos = Vector2( 2.04342, 13.7657 )
+transform/rot = -17.6255
+
+[node name="Particles2D1" type="Particles2D" parent="ansbox/q1/coinparticle"]
+
+transform/pos = Vector2( 4.95798, 2.10164 )
+transform/rot = -139.332
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 3
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 2.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 550.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 2.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="ansbox/q1/coinparticle"]
+
+transform/pos = Vector2( 1.93822, 3.04014 )
+transform/rot = -143.558
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 4
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 3.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 558.54
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 1.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="percent" type="Node2D" parent="ansbox/q1"]
+
+transform/pos = Vector2( -6.00761, 0.953245 )
+
+[node name="Label1" type="Label" parent="ansbox/q1/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = -5.00002
+margin/right = 218.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "30"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="ansbox/q1/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 171.0
+margin/top = -5.00002
+margin/right = 230.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "%"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="q2" type="Node2D" parent="ansbox"]
+
+editor/display_folded = true
+transform/pos = Vector2( 20, 236 )
+
+[node name="btnq2" type="TouchScreenButton" parent="ansbox/q2"]
+
+transform/pos = Vector2( -10.3379, -7.48888 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 16 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Label" type="Label" parent="ansbox/q2"]
+
+rect/rotation = 0.842032
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5.0
+margin/top = -4.0
+margin/right = 353.0
+margin/bottom = 53.0
+custom_colors/font_color = Color( 0.0358353, 0.0429688, 0.0322266, 1 )
+text = "hi are you fine you must "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ansbox/q2"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 9 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="pos" type="Node2D" parent="ansbox/q2"]
+
+transform/pos = Vector2( -0.0153961, 2.16924 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="right" type="Sprite" parent="ansbox/q2/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 13.7255, 2.9346 )
+texture = ExtResource( 17 )
+
+[node name="wrong" type="Sprite" parent="ansbox/q2/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 340.174, 2.98832 )
+texture = ExtResource( 18 )
+
+[node name="coinparticle" type="Node2D" parent="ansbox/q2"]
+
+transform/pos = Vector2( 10.2101, 7.99432 )
+transform/rot = -10.6359
+
+[node name="Particles2D1" type="Particles2D" parent="ansbox/q2/coinparticle"]
+
+transform/pos = Vector2( 4.95798, 2.10164 )
+transform/rot = -143.469
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 3
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 2.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 558.54
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 2.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="ansbox/q2/coinparticle"]
+
+transform/pos = Vector2( 1.93822, 3.04014 )
+transform/rot = -143.491
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 4
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 3.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 600.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 1.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="percent" type="Node2D" parent="ansbox/q2"]
+
+editor/display_folded = true
+transform/pos = Vector2( -7.25687, 0.944477 )
+
+[node name="Label1" type="Label" parent="ansbox/q2/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = -5.00002
+margin/right = 218.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "30"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="ansbox/q2/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 171.0
+margin/top = -5.00002
+margin/right = 230.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "%"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="q3" type="Node2D" parent="ansbox"]
+
+editor/display_folded = true
+transform/pos = Vector2( 20, 268 )
+
+[node name="btnq3" type="TouchScreenButton" parent="ansbox/q3"]
+
+transform/pos = Vector2( -10.3379, -7.48888 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 16 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Label" type="Label" parent="ansbox/q3"]
+
+rect/rotation = 0.842032
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5.0
+margin/top = -4.0
+margin/right = 353.0
+margin/bottom = 53.0
+custom_colors/font_color = Color( 0.0358353, 0.0429688, 0.0322266, 1 )
+text = "hi are you fine you must "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ansbox/q3"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 9 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="pos" type="Node2D" parent="ansbox/q3"]
+
+transform/pos = Vector2( -0.882198, 3.20932 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="right" type="Sprite" parent="ansbox/q3/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 13.7255, 2.9346 )
+texture = ExtResource( 17 )
+
+[node name="wrong" type="Sprite" parent="ansbox/q3/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 344.19, 1.01955 )
+texture = ExtResource( 18 )
+
+[node name="coinparticle" type="Node2D" parent="ansbox/q3"]
+
+transform/pos = Vector2( 4.25285, 9.33035 )
+transform/rot = -8.6637
+
+[node name="Particles2D1" type="Particles2D" parent="ansbox/q3/coinparticle"]
+
+transform/pos = Vector2( 4.95798, 2.10164 )
+transform/rot = -143.751
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 3
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 2.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 651.63
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 2.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="ansbox/q3/coinparticle"]
+
+transform/pos = Vector2( 1.93822, 3.04014 )
+transform/rot = -143.398
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 4
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 3.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 670.26
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 1.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="percent" type="Node2D" parent="ansbox/q3"]
+
+transform/pos = Vector2( -7.50618, 0.943542 )
+
+[node name="Label1" type="Label" parent="ansbox/q3/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = -5.00002
+margin/right = 218.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "30"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="ansbox/q3/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 171.0
+margin/top = -5.00002
+margin/right = 230.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "%"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="q4" type="Node2D" parent="ansbox"]
+
+editor/display_folded = true
+transform/pos = Vector2( 20, 300 )
+
+[node name="btnq4" type="TouchScreenButton" parent="ansbox/q4"]
+
+transform/pos = Vector2( -10.3379, -7.48888 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 16 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Label" type="Label" parent="ansbox/q4"]
+
+rect/rotation = 0.842032
+rect/scale = Vector2( 0, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5.0
+margin/top = -5.0
+margin/right = 353.0
+margin/bottom = 52.0
+custom_colors/font_color = Color( 0.0358353, 0.0429688, 0.0322266, 1 )
+text = "hi are you fine you must "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ansbox/q4"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 9 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="pos" type="Node2D" parent="ansbox/q4"]
+
+transform/pos = Vector2( -1.47128, 2.2688 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="right" type="Sprite" parent="ansbox/q4/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 13.7255, 2.9346 )
+texture = ExtResource( 17 )
+
+[node name="wrong" type="Sprite" parent="ansbox/q4/pos"]
+
+visibility/visible = false
+transform/pos = Vector2( 342.174, 3.0039 )
+texture = ExtResource( 18 )
+
+[node name="coinparticle" type="Node2D" parent="ansbox/q4"]
+
+transform/pos = Vector2( 4.23746, 11.4996 )
+transform/rot = -4.23339
+
+[node name="Particles2D1" type="Particles2D" parent="ansbox/q4/coinparticle"]
+
+transform/pos = Vector2( 4.95798, 2.10164 )
+transform/rot = -143.128
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 3
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 2.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 707.49
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 2.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="ansbox/q4/coinparticle"]
+
+transform/pos = Vector2( 1.93822, 3.04014 )
+transform/rot = -144.338
+transform/scale = Vector2( 0.3, 0.3 )
+config/amount = 4
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/texture = ExtResource( 19 )
+params/direction = 0.0
+params/spread = 20.0
+params/linear_velocity = 20.0
+params/spin_velocity = 3.0
+params/orbit_velocity = -1.8
+params/gravity_direction = 0.0
+params/gravity_strength = 707.49
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 1.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+color/color = Color( 0.928638, 0.929688, 0.795319, 1 )
+
+[node name="percent" type="Node2D" parent="ansbox/q4"]
+
+transform/pos = Vector2( -8.75545, 0.934784 )
+
+[node name="Label1" type="Label" parent="ansbox/q4/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 158.0
+margin/top = -5.00002
+margin/right = 218.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "30"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="ansbox/q4/percent"]
+
+visibility/visible = false
+rect/rotation = 0.842032
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 171.0
+margin/top = -5.00002
+margin/right = 230.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.083684, 0.367188, 0.00430298, 1 )
+text = "%"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="ansbox"]
+
+[node name="down" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( -7, 0 )
+
+[node name="next" type="TouchScreenButton" parent="down"]
+
+transform/pos = Vector2( 142.5, 321 )
+transform/rot = 2.39204
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 21 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="previous" type="TouchScreenButton" parent="down"]
+
+transform/pos = Vector2( 95.5, 363 )
+transform/rot = 181.302
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 21 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="whatsapp" type="TouchScreenButton" parent="down"]
+
+editor/display_folded = true
+transform/pos = Vector2( 94.5, 320 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 22 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+script/script = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="down/whatsapp"]
+
+visibility/visible = false
+hint/tooltip = "share this question"
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 52.0
+margin/top = 84.0
+margin/right = 175.0
+margin/bottom = 98.0
+text = "share"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="down"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 11 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="gamebtn" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 9, 45 )
+
+[node name="Sprite" type="Sprite" parent="gamebtn"]
+
+visibility/opacity = 0.1
+transform/pos = Vector2( 110, 347 )
+z/z = -5
+texture = ExtResource( 16 )
+
+[node name="audience" type="TouchScreenButton" parent="gamebtn"]
+
+transform/pos = Vector2( 152, 320 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 24 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="5050" type="TouchScreenButton" parent="gamebtn"]
+
+transform/pos = Vector2( 0, 320 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 25 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gamebtn"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 11 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="rateus" type="TouchScreenButton" parent="gamebtn"]
+
+transform/pos = Vector2( 49, 321 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 26 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="skip" type="TouchScreenButton" parent="gamebtn"]
+
+transform/pos = Vector2( 100, 321 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -5
+normal = ExtResource( 27 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="setting" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 206, -2.5 )
+transform/scale = Vector2( 0.3, 0.3 )
+normal = ExtResource( 28 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Timerparticle" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="Timercoin" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
+[node name="Node2D" parent="." instance=ExtResource( 29 )]
+
+[node name="ui" parent="." instance=ExtResource( 30 )]
+
+[node name="Sprite2" parent="ui/CanvasLayer/Popuplevel"]
+
+transform/pos = Vector2( 116.5, 144 )
+
+[node name="star" parent="ui/CanvasLayer/Popuplevel"]
+
+transform/pos = Vector2( 107, 107 )
+
+[node name="ok" parent="ui/CanvasLayer/Popuplevel/nextok"]
+
+margin/left = 62.0
+margin/top = 252.0
+margin/right = 281.0
+margin/bottom = 319.0
+text = "Pay          coin for 
+       next level"
+
+[node name="coinlimit" parent="ui/CanvasLayer/Popuplevel/nextok"]
+
+margin/left = 51.0
+margin/top = 245.0
+margin/right = 270.0
+margin/bottom = 312.0
+text = "300"
+
+[node name="notok" parent="ui/CanvasLayer/Popuplevel"]
+
+transform/pos = Vector2( 1, 2 )
+
+[node name="notok" parent="ui/CanvasLayer/Popuplevel/notok"]
+
+margin/left = 38.0
+margin/top = 246.0
+margin/right = 543.0
+margin/bottom = 313.0
+
+[node name="earncoinnext" parent="ui/CanvasLayer/Popuplevel/notok"]
+
+normal = ExtResource( 31 )
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/Popuplevel"]
+
+transform/pos = Vector2( 75, 201 )
+transform/scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 32 )
+
+[node name="total" type="Label" parent="ui/CanvasLayer/Popuplevel/Sprite"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -24.0
+margin/top = -5.0
+margin/right = 136.0
+margin/bottom = 64.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.12357, 0.210938, 0.0181274, 1 )
+text = "15
+"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="gain" type="Label" parent="ui/CanvasLayer/Popuplevel/Sprite"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -53.0
+margin/top = -24.0
+margin/right = 107.0
+margin/bottom = 45.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.12357, 0.210938, 0.0181274, 1 )
+text = "10
+"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Labelgreet" type="Label" parent="ui/CanvasLayer/Popuplevel"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 104.0
+margin/top = 188.0
+margin/right = 264.0
+margin/bottom = 258.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.12357, 0.210938, 0.0181274, 1 )
+text = "Excellent"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite2" parent="ui/CanvasLayer/gameend"]
+
+transform/pos = Vector2( 117.5, 148 )
+
+[node name="star" parent="ui/CanvasLayer/gameend"]
+
+transform/pos = Vector2( 108, 105 )
+
+[node name="Labelgreet1" type="Label" parent="ui/CanvasLayer/gameend"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 73.0
+margin/top = 251.0
+margin/right = 233.0
+margin/bottom = 320.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.12357, 0.210938, 0.0181274, 1 )
+text = "Excellent"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="score" type="Node2D" parent="ui/CanvasLayer/gameend"]
+
+transform/pos = Vector2( 70, 194 )
+
+[node name="current" type="Node2D" parent="ui/CanvasLayer/gameend/score"]
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/gameend/score/current"]
+
+editor/display_folded = true
+transform/pos = Vector2( 86, -2 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/gameend/score/current/Sprite"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -78.0
+margin/top = -30.0
+margin/right = 82.0
+margin/bottom = 39.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "0"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/gameend/score/current"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -26.0
+margin/top = -18.0
+margin/right = 134.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "Your Score"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="high" type="Node2D" parent="ui/CanvasLayer/gameend/score"]
+
+editor/display_folded = true
+transform/pos = Vector2( 0, 30 )
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/gameend/score/high"]
+
+editor/display_folded = true
+transform/pos = Vector2( 86, -2 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/gameend/score/high/Sprite"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -78.0
+margin/top = -30.0
+margin/right = 82.0
+margin/bottom = 39.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "12"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/gameend/score/high"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -26.0
+margin/top = -18.0
+margin/right = 134.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "High Score"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="notok1" parent="ui/CanvasLayer/lifeline"]
+
+visibility/visible = false
+
+[node name="notok" parent="ui/CanvasLayer/lifeline/notok1"]
+
+margin/left = 39.0
+margin/top = 250.0
+margin/right = 544.0
+margin/bottom = 317.0
+
+[node name="earncoingame" parent="ui/CanvasLayer/lifeline/notok1"]
+
+transform/pos = Vector2( 84, 298 )
+normal = ExtResource( 31 )
+
+[node name="ok" parent="ui/CanvasLayer/lifeline"]
+
+transform/pos = Vector2( 0, 2 )
+
+[node name="valuecoinn" parent="ui/CanvasLayer/lifeline/ok"]
+
+margin/left = 69.0
+margin/top = 248.0
+margin/right = 131.0
+margin/bottom = 315.0
+text = "100"
+
+[node name="notok" parent="ui/CanvasLayer/lifeline/ok"]
+
+margin/left = 37.0
+margin/top = 249.0
+margin/right = 542.0
+margin/bottom = 316.0
+text = " Pay         coin to use this 
+                lifeline "
+
+[node name="paycoin" parent="ui/CanvasLayer/lifeline/ok"]
+
+transform/pos = Vector2( 84, 297 )
+normal = ExtResource( 33 )
+
+[node name="coin" type="Node2D" parent="ui/CanvasLayer/lifeline"]
+
+transform/pos = Vector2( 61, 214.5 )
+transform/scale = Vector2( 0.95, 0.95 )
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/lifeline/coin"]
+
+transform/pos = Vector2( 77, -2 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/lifeline/coin/Sprite"]
+
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -72.0
+margin/top = -26.0
+margin/right = 88.0
+margin/bottom = 43.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "1000
+"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/lifeline/coin"]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -26.0
+margin/top = -18.0
+margin/right = 134.0
+margin/bottom = 51.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "Your Coin"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="coin1" type="Sprite" parent="ui/CanvasLayer/lifeline/coin"]
+
+transform/pos = Vector2( 110.5, -3 )
+transform/scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 19 )
+
+[node name="coin2" type="Sprite" parent="ui/CanvasLayer/lifeline/coin"]
+
+transform/pos = Vector2( 115.5, 0.5 )
+transform/scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 19 )
+
+[node name="liferemain" type="Node2D" parent="ui/CanvasLayer/lifeline"]
+
+transform/pos = Vector2( 60, 160.5 )
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/lifeline/liferemain"]
+
+transform/pos = Vector2( 54.5, 3.5 )
+transform/scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/lifeline/liferemain/Sprite"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -82.0
+margin/top = -30.0
+margin/right = 78.0
+margin/bottom = 39.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.207031, 0.0965973, 0.0234528, 1 )
+text = "3"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="popupearn" parent="ui/CanvasLayer" instance=ExtResource( 34 )]
+
+[node name="Label1" parent="ui/CanvasLayer/popupearn"]
+
+rect/scale = Vector2( 0.45, 0.45 )
+margin/top = 149.0
+margin/bottom = 182.0
+text = "1000"
+
+[node name="Sprite" parent="ui/CanvasLayer/popupearn"]
+
+transform/pos = Vector2( 176, 157 )
+
+[node name="Sprite1" parent="ui/CanvasLayer/popupearn"]
+
+transform/pos = Vector2( 168, 155 )
+
+[node name="Tonextlevel" type="TouchScreenButton" parent="ui/CanvasLayer/popupearn"]
+
+visibility/visible = false
+transform/pos = Vector2( 91, 301 )
+transform/scale = Vector2( 0.3, 0.3 )
+normal = ExtResource( 35 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="morecoin" type="Label" parent="ui/CanvasLayer/popupearn"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 76.0
+margin/top = 335.0
+margin/right = 172.0
+margin/bottom = 349.0
+text = "Earn more coin"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="menuin" parent="ui/CanvasLayer" instance=ExtResource( 36 )]
+
+[node name="LinkButton" parent="ui/CanvasLayer/menuin"]
+
+margin/left = 82.0
+margin/top = 275.0
+margin/right = 169.0
+margin/bottom = 289.0
+
+[node name="home" type="TouchScreenButton" parent="ui/CanvasLayer/menuin"]
+
+visibility/opacity = 0.9
+transform/pos = Vector2( 85, 291 )
+transform/scale = Vector2( 0.4, 0.4 )
+normal = ExtResource( 37 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="levelinfo" parent="ui/CanvasLayer" instance=ExtResource( 38 )]
+
+[node name="whindi" parent="ui/CanvasLayer/levelinfo/Container"]
+
+margin/left = 17.0
+margin/right = 460.0
+
+[node name="sentencemode" parent="ui/CanvasLayer" instance=ExtResource( 39 )]
+
+[node name="wnumber" parent="ui/CanvasLayer/sentencemode/Container"]
+
+margin/left = 96.0
+margin/top = 67.0
+margin/right = 177.0
+margin/bottom = 140.0
+
+[node name="Container2" parent="ui/CanvasLayer/sentencemode"]
+
+visibility/opacity = 0.0
+
+[node name="mode" type="Control" parent="ui/CanvasLayer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/mode"]
+
+transform/pos = Vector2( 112.5, 215 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 40 )
+
+[node name="AnimationPlayer" parent="ui/CanvasLayer/mode" instance=ExtResource( 41 )]
+
+[node name="learningmode" type="TouchScreenButton" parent="ui/CanvasLayer/mode"]
+
+transform/pos = Vector2( 38, 162 )
+transform/scale = Vector2( 0.46, 0.5 )
+normal = ExtResource( 42 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="gamemode" type="TouchScreenButton" parent="ui/CanvasLayer/mode"]
+
+transform/pos = Vector2( 37, 232 )
+transform/scale = Vector2( 0.46, 0.5 )
+normal = ExtResource( 43 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="sentencemode" type="TouchScreenButton" parent="ui/CanvasLayer/mode"]
+
+transform/pos = Vector2( 37, 197 )
+transform/scale = Vector2( 0.46, 0.5 )
+normal = ExtResource( 44 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="extralife" type="Control" parent="ui/CanvasLayer"]
+
+rect/rotation = 90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="ui/CanvasLayer/extralife"]
+
+transform/pos = Vector2( 112.5, 215 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 40 )
+
+[node name="AnimationPlayer" parent="ui/CanvasLayer/extralife" instance=ExtResource( 41 )]
+
+[node name="video" type="TouchScreenButton" parent="ui/CanvasLayer/extralife"]
+
+transform/pos = Vector2( 77, 235 )
+transform/scale = Vector2( 0.473946, 0.517433 )
+normal = ExtResource( 45 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Label" type="Label" parent="ui/CanvasLayer/extralife"]
+
+rect/scale = Vector2( 0.6, 0.6 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 21.0
+margin/top = 128.0
+margin/right = 324.0
+margin/bottom = 196.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.0239689, 0.269531, 0.00315857, 1 )
+text = "Extra Life"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ltime" type="Sprite" parent="ui/CanvasLayer/extralife"]
+
+transform/pos = Vector2( 111, 193 )
+transform/scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 14 )
+
+[node name="Label1" type="Label" parent="ui/CanvasLayer/extralife/ltime"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -22.0
+margin/top = -19.0
+margin/right = 24.0
+margin/bottom = 29.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.00644159, 0.0703125, 0.00274658, 1 )
+text = "10"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer 2" type="AnimationPlayer" parent="ui/CanvasLayer/extralife"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 14 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="extralifetimer" type="Timer" parent="ui/CanvasLayer/extralife"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="guide" parent="ui/CanvasLayer" instance=ExtResource( 46 )]
+
+[node name="Label5" parent="ui/CanvasLayer/guide"]
+
+text = "funsZ'k
+
+cps gq, 'kCn ge bafXy'k esa gh ç;ksx djrs gs tSls dh fØdsV ] eksckby vkfnA ges bu 'kCnksa dks fganh esa tkuus dh dksbZ vko';drk ugha gSaA vc vki i<+s gq, 'kCnksa dks jkstkuk ç;ksx esa yk, vkSj dqN fnuksa ds varjky esa bu 'kCnksa dks ns[krs jgsA"
+
+[node name="ConfirmationDialog" parent="ui/CanvasLayer" instance=ExtResource( 47 )]
+
+[node name="networkerror" type="Node2D" parent="ui/CanvasLayer"]
+
+visibility/visible = false
+transform/pos = Vector2( -5, 0 )
+
+[node name="networkerror" type="Label" parent="ui/CanvasLayer/networkerror"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 40.0
+margin/top = 135.0
+margin/right = 192.0
+margin/bottom = 183.0
+text = "No Internet Connection
+  Turn on your Internet 
+          Connection"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="ui/CanvasLayer/networkerror"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 92.0
+margin/top = 204.0
+margin/right = 141.0
+margin/bottom = 224.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Retry"
+flat = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 15 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="nexttime" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.5
+one_shot = true
+autostart = false
+
+[node name="Node2D 2" parent="." instance=ExtResource( 48 )]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+
+transform/pos = Vector2( 114, 190 )
+config/amount = 50
+config/lifetime = 2.0
+config/emitting = false
+config/process_mode = 1
+config/explosiveness = 0.2
+params/direction = 0.0
+params/spread = 180.0
+params/linear_velocity = 60.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 4.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color = Color( 0.143886, 0.664063, 0.127106, 1 )
+color/color_ramp = SubResource( 16 )
+
+[connection signal="addinter" from="." to="Node2D" method="_on_main_addinter"]
+
+[connection signal="addinter1" from="." to="Node2D 2" method="_on_main_addinter1"]
+
+[connection signal="playerout" from="." to="ui" method="_on_main_playerout"]
+
+[connection signal="pressed" from="ansbox/q1/btnq1" to="." method="_on_btnq1_pressed"]
+
+[connection signal="released" from="ansbox/q1/btnq1" to="." method="_on_btnq1_released"]
+
+[connection signal="pressed" from="ansbox/q2/btnq2" to="." method="_on_btnq2_pressed"]
+
+[connection signal="released" from="ansbox/q2/btnq2" to="." method="_on_btnq2_released"]
+
+[connection signal="pressed" from="ansbox/q3/btnq3" to="." method="_on_btnq3_pressed"]
+
+[connection signal="released" from="ansbox/q3/btnq3" to="." method="_on_btnq3_released"]
+
+[connection signal="pressed" from="ansbox/q4/btnq4" to="." method="_on_btnq4_pressed"]
+
+[connection signal="released" from="ansbox/q4/btnq4" to="." method="_on_btnq4_released"]
+
+[connection signal="pressed" from="down/next" to="." method="_on_next_pressed"]
+
+[connection signal="released" from="down/next" to="." method="_on_next_released"]
+
+[connection signal="pressed" from="down/previous" to="." method="_on_previous_pressed"]
+
+[connection signal="released" from="down/previous" to="." method="_on_previous_released"]
+
+[connection signal="pressed" from="down/whatsapp" to="." method="_on_whatsapp_pressed"]
+
+[connection signal="pressed" from="down/whatsapp" to="down/whatsapp" method="_on_share_pressed"]
+
+[connection signal="released" from="down/whatsapp" to="." method="_on_whatsapp_released"]
+
+[connection signal="pressed" from="gamebtn/audience" to="." method="_on_audience_pressed"]
+
+[connection signal="released" from="gamebtn/audience" to="." method="_on_audience_released"]
+
+[connection signal="pressed" from="gamebtn/5050" to="." method="_on_5050_pressed"]
+
+[connection signal="released" from="gamebtn/5050" to="." method="_on_5050_released"]
+
+[connection signal="pressed" from="gamebtn/rateus" to="." method="_on_rateus_pressed"]
+
+[connection signal="released" from="gamebtn/rateus" to="." method="_on_rateus_released"]
+
+[connection signal="pressed" from="gamebtn/skip" to="." method="_on_skip_pressed"]
+
+[connection signal="released" from="gamebtn/skip" to="." method="_on_skip_released"]
+
+[connection signal="pressed" from="setting" to="." method="_on_setting_pressed"]
+
+[connection signal="released" from="setting" to="." method="_on_setting_released"]
+
+[connection signal="timeout" from="Timerparticle" to="." method="_on_Timerparticle_timeout"]
+
+[connection signal="timeout" from="Timercoin" to="." method="_on_Timercoin_timeout"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="coinupdate" from="Node2D" to="." method="update_coin"]
+
+[connection signal="refresh" from="Node2D" to="." method="_on_Node2D_refresh"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popupdied/backretry" to="." method="_on_backretry_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popuplevel/backtoui" to="Node2D" method="_on_home_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popuplevel/nextok/changelevel" to="." method="_on_changelevel_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popuplevel/nextok/changelevel" to="Node2D" method="_on_changelevel_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/Popuplevel/nextok/changelevel" to="." method="_on_changelevel_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popuplevel/tempok/changelevel" to="." method="_on_changeleveltemp_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popuplevel/tempok/changelevel" to="Node2D" method="_on_home_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/Popuplevel/notok/earncoinnext" to="." method="_on_earncoinnext_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/Popuplevel/notok/earncoinnext" to="." method="_on_earncoinnext_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/gameend/backtoui" to="." method="_on_backtouifromgame_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/gameend/backtoui" to="Node2D" method="_on_home_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/gameend/backtoui" to="." method="_on_backtoui_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/gameend/retrygame" to="." method="_on_retrygame_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/gameend/retrygame" to="Node2D" method="_on_home_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/gameend/retrygame" to="." method="_on_retrygame_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/lifeline/backlifeline" to="." method="_on_backlifeline_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/lifeline/notok1/earncoingame" to="." method="_on_earncoingame_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/lifeline/notok1/earncoingame" to="." method="_on_earncoingame_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/lifeline/ok/paycoin" to="." method="_on_paycoin_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/lifeline/ok/paycoin" to="." method="_on_paycoin_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/popupearn/backmenuearn" to="." method="_on_backmenuearn_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/popupearn/coinadd" to="Node2D" method="_on_coinadd_pressed"]
+
+[connection signal="coin_update" from="ui/CanvasLayer/popupearn/share" to="." method="update_coin"]
+
+[connection signal="refresh" from="ui/CanvasLayer/popupearn/share" to="." method="_on_share_refresh"]
+
+[connection signal="pressed" from="ui/CanvasLayer/popupearn/Tonextlevel" to="." method="_on_Tonextlevel_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/menuin/VBoxContainer/backmain" to="." method="_on_backmain_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/menuin/home" to="." method="_on_home_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/levelinfo/button/nextw" to="." method="_on_nextw_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/levelinfo/button/nextw" to="." method="_on_nextw_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/levelinfo/button/previousw" to="." method="_on_previousw_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/levelinfo/button/previousw" to="." method="_on_previousw_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/sentencemode/button/nexts" to="." method="_on_nexts_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/sentencemode/button/nexts" to="." method="_on_nexts_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/sentencemode/button/previouss" to="." method="_on_previouss_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/sentencemode/button/previouss" to="." method="_on_previouss_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/sentencemode/button/show" to="." method="_on_show_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/sentencemode/button/show" to="." method="_on_show_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/mode/learningmode" to="." method="_on_learningmode_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/mode/learningmode" to="." method="_on_learningmode_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/mode/gamemode" to="." method="_on_gamemode_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/mode/gamemode" to="." method="_on_gamemode_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/mode/sentencemode" to="." method="_on_sentencemode_pressed"]
+
+[connection signal="released" from="ui/CanvasLayer/mode/sentencemode" to="." method="_on_sentencemode_released"]
+
+[connection signal="pressed" from="ui/CanvasLayer/extralife/video" to="Node2D 2" method="_on_video_pressed"]
+
+[connection signal="timeout" from="ui/CanvasLayer/extralife/extralifetimer" to="." method="_on_extralifetimer_timeout"]
+
+[connection signal="pressed" from="ui/CanvasLayer/ConfirmationDialog/no" to="." method="_on_no_pressed"]
+
+[connection signal="pressed" from="ui/CanvasLayer/networkerror/Button" to="." method="_on_Button_pressed"]
+
+[connection signal="timeout" from="nexttime" to="." method="_on_nexttime_timeout"]
+
+[connection signal="lifegain" from="Node2D 2" to="." method="_on_Node2D_2_lifegain"]
+
+
+[editable path="Node2D"]
+[editable path="ui"]
+[editable path="ui/CanvasLayer/popupearn"]
+[editable path="ui/CanvasLayer/menuin"]
+[editable path="ui/CanvasLayer/levelinfo"]
+[editable path="ui/CanvasLayer/sentencemode"]
+[editable path="ui/CanvasLayer/guide"]
+[editable path="ui/CanvasLayer/ConfirmationDialog"]
+[editable path="Node2D 2"]

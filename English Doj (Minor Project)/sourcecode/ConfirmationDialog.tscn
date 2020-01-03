@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://asset/confirmpopup.png" type="Texture" id=1]
+[ext_resource path="res://ConfirmationDialog.gd" type="Script" id=2]
+[ext_resource path="res://asset/yes.png" type="Texture" id=3]
+[ext_resource path="res://asset/no.png" type="Texture" id=4]
+
+[node name="ConfirmationDialog" type="Sprite"]
+
+visibility/visible = false
+transform/pos = Vector2( 112.5, 200 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
+
+[node name="yes" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( -76, 34 )
+transform/scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="no" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 26, 46 )
+transform/scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 4 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
+
+[connection signal="pressed" from="no" to="." method="_on_no_pressed"]
+
+
