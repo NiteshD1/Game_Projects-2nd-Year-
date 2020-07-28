@@ -1,0 +1,39 @@
+Short Description :
+    
+     Bouncing Box is casual game but fun to play game of 2018 and 2019. Bouncing Box is the latest physics based game in which you need
+     reach the finish line. There are many obstacle in your way but you need to save yourself from them.
+     Contains very difficult level which are not so much easy so it is fun to play. Bouncing Box as name 
+     suggest that there is a box which can bounce on other object. This game have gameplay like ketchupp
+    games , easy to play but fun to play.
+
+
+Long description:
+
+    Bouncing Box is the new hyper casual physics based game. It can be play with one hand with very less
+    effort. When you start your journey , at first you find it simple game but as you go upward its speed 
+    increases and it becomes difficult to survive. As you move the colour of background gradually changes
+    which is nice effect.In the game there is lot of obstacle like balls , enemy stars and rotating wheels and 
+    many more. You need to collect more gems to clear level with more stars.sometimes it becomes the 
+    hardest game because of its difficult level design.The game needs concentration and attention to 
+    overcome the levels.
+    It is best game of 2018 and 2019 , play and enjoy.
+
+    Controls :
+                   This game is easy to play you can even play it with one hand.
+                    Tap middle of the screen to bounce upward.
+                     Tap right of the screen to move right.
+                     Tap left of the screen to move left.
+    Feature:
+                  The game based on real world physics so when you start your adventure avoid other obstacle.
+                   It is free game with some adds.
+                   It contain good graphics with nice sound.
+                   It contains ultimate game level.
+                   It will be updated regularly.
+     Rate this game and support as to grow our team. 
+     If you have any querry you can email on   dewadanitesh@gmail.com
+     contact us on www.dreamcasual.com
+
+org.godotengine.$genname
+
+
+-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs6eYXLJVUzqazLDVPkrZ7JjY8YX/xOke0DdG4fkPiVW3SK9Fy66YQBMwiK6j9ETQ5Llgy+BL2FCO4xsTqjG9C6t7ypmuGWkyb2YmcCGt0+JBvLK9UMhx3jDCG8sN0d+OMMiyWhBvz4o+BPF8bAj/oaZvo0BIqqyQ8e4ME/rYy8h9xjbONsZw/VGgCWSAjRJluua8r7YndG11Mx7v98nfre9CsciliXJvyk0UOnegY5Eb3uQCgKKaRwmw3UVRCipsmEVuJKJg6qj8uiNxBZobVMtpF2l3oVbnyiv7NgTBAfuzIAme+thwRUcOkPk0N0g65nrorEjrTkzyVTx5FUJcoQIDAQAB-----END PUBLIC KEY-----
