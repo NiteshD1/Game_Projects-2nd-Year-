@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scene/Square.gd" type="Script" id=1]
+[ext_resource path="res://image/square.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 21, 19.578 )
+
+[node name="Square" type="RigidBody2D" groups=[
+"square",
+"rectfree",
+]]
+
+input_pickable = false
+collision_layer = 4
+collision_mask = 110
+mode = 1
+mass = 100.0
+friction = 1.0
+bounce = 0.4
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = true
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+scale = Vector2( 0.4, 0.4 )
+shape = SubResource( 1 )
+
+

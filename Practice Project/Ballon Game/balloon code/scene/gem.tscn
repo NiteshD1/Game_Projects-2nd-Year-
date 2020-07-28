@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://gem.gd" type="Script" id=1]
+[ext_resource path="res://image/invisiblehold.png" type="Texture" id=2]
+[ext_resource path="res://image/invisible.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "New Anim"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.3, 0.3 ), Vector2( 0.4, 0.4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.585647 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="gem" type="Area2D" groups=[
+"gem",
+]]
+
+scale = Vector2( 0.5, 0.5 )
+z_index = 5
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -2, -32.9889, 24, 2.01106, 24, 2.01106, 3, 30.0111, -25, -1.98894 )
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.347593, 0.347593 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="2"]
+
+modulate = Color( 1, 1, 1, 0.78285 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+"anims/New Anim" = SubResource( 1 )
+blend_times = [  ]
+
+[connection signal="body_entered" from="." to="." method="_on_gem_body_entered"]
+
+

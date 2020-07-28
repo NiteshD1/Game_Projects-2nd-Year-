@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scene/Starb.gd" type="Script" id=1]
+[ext_resource path="res://image/star1.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 19.0
+
+[node name="Starb" type="RigidBody2D" groups=[
+"starb",
+]]
+
+input_pickable = false
+collision_layer = 4
+collision_mask = 111
+mode = 0
+mass = 20.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 2
+contacts_reported = 2
+contact_monitor = false
+sleeping = true
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 5.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 1, -2 )
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 1 )
+
+

@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[android]
+
+modules="org/godotengine/godot/GodotAdMob"
+
+[application]
+
+config/name="Bouncing Box"
+run/main_scene="res://scene/guimain.tscn"
+boot_splash/image="res://image/splash.png"
+boot_splash/bg_color=Color( 0.0078125, 0.00775146, 0.00775146, 1 )
+config/icon="res://icon.png"
+
+[autoload]
+
+utils="*res://scene/utils.gd"
+audio="*res://scene/audio.tscn"
+Player="*res://scene/Player.tscn"
+
+[display]
+
+window/size/width=225
+window/size/height=400
+window/size/test_width=360
+window/size/test_height=640
+window/dpi/allow_hidpi=true
+window/handheld/orientation="portrait"
+window/handheld/emulate_touchscreen=true
+window/stretch/mode="2d"
+window/stretch/shrink="1"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "ndee.asset_dropper" )
+
+[layer_names]
+
+2d_physics/layer_1="bg"
+2d_physics/layer_2="player"
+2d_physics/layer_3="obstacle"
+2d_physics/layer_4="area"
+2d_physics/layer_5="topnode"
+2d_physics/layer_6="moveobstacle"
+2d_physics/layer_7="starblack"
+
+[rendering]
+
+quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0.111451, 0.046902, 0.226549, 1 )
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=true

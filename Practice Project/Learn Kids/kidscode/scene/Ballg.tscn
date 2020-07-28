@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scene/Ballg.gd" type="Script" id=1]
+[ext_resource path="res://image/greenball.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 18.0
+
+[node name="Ballg" type="RigidBody2D" groups=[
+"ballg",
+]]
+
+position = Vector2( 107, 53 )
+input_pickable = false
+collision_layer = 4
+collision_mask = 79
+mode = 0
+mass = 20.0
+friction = 1.0
+bounce = 0.54
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 2
+contacts_reported = 5
+contact_monitor = true
+sleeping = true
+can_sleep = true
+linear_velocity = Vector2( 8, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Linear", "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -1, 2 )
+scale = Vector2( 0.65, 0.65 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

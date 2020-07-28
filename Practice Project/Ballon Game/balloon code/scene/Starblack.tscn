@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scene/Starblack.gd" type="Script" id=1]
+[ext_resource path="res://image/star.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 22.0076
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Starblack" type="StaticBody2D"]
+
+input_pickable = false
+collision_layer = 16
+collision_mask = 8
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Angular", "Collision", "Transform" ]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="0" groups=[
+"starblack",
+"rectfree",
+]]
+
+input_pickable = false
+collision_layer = 64
+collision_mask = 46
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 2
+contacts_reported = 2
+contact_monitor = true
+sleeping = true
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 10.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Collision", "Transform" ]
+rot = 10
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
+
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
+
+position = Vector2( -2.5, -2.5 )
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 1 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." index="1"]
+
+position = Vector2( -2, -2 )
+node_a = NodePath("..")
+node_b = NodePath("../RigidBody2D")
+bias = 0.0
+disable_collision = true
+softness = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( -2.5, -1.5 )
+shape = SubResource( 2 )
+
+

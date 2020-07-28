@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://dianasour/Idle (1).png" type="Texture" id=2]
+
+[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+
+position = Vector2( 115, 100 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 3
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+speed = 100.0
+jumpspeed = 50.0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+position = Vector2( -103, -71 )
+build_mode = 0
+polygon = PoolVector2Array( 66.2154, 10.6455, 78.2154, 15.6455, 86.2154, 27.6455, 94.2154, 19.6455, 108.215, 28.6455, 110.215, 38.6455, 102.215, 56.6455, 83.4292, 58.211, 66.2154, 59.6455, 82.2154, 92.6455, 69.2154, 111.645, 88.2154, 122.645, 41.2154, 123.645, 45.2154, 102.645, 10.2154, 87.6455, 3.21542, 72.6455, 37.2154, 82.6455, 47.2154, 34.6455 )
+_sections_unfolded = [ "Visibility" ]
+
+
