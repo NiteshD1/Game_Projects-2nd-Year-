@@ -1,0 +1,188 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://scene/ui.gd" type="Script" id=1]
+[ext_resource path="res://image/bgsky.png" type="Texture" id=2]
+[ext_resource path="res://image/logo.png" type="Texture" id=3]
+[ext_resource path="res://image/name.png" type="Texture" id=4]
+[ext_resource path="res://image/menu.png" type="Texture" id=5]
+[ext_resource path="res://font/463dbbe9b41acf3e13c81c645f024bd8.png" type="Texture" id=6]
+[ext_resource path="res://image/sound.png" type="Texture" id=7]
+[ext_resource path="res://menuin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://controlinfo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Popup2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ConfirmationDialog.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "New Anim"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Button:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -60, 3 ), Vector2( 6, 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Button2:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 232, 3 ), Vector2( 172, 3 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Button3:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.5, 1.0 ]
+}
+
+[node name="ui" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Control" type="Container" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="Control"]
+
+transform/pos = Vector2( 119, 199 )
+transform/scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="name" type="Sprite" parent="Control"]
+
+transform/pos = Vector2( 113, 78 )
+transform/scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 334.0
+margin/right = 44.0
+margin/bottom = 374.0
+alignment = 0
+
+[node name="Button" type="TouchScreenButton" parent="Control/HBoxContainer"]
+
+transform/pos = Vector2( -60, 3 )
+transform/scale = Vector2( 0.42, 0.4 )
+normal = ExtResource( 5 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Button3" type="TouchScreenButton" parent="Control/HBoxContainer"]
+
+visibility/opacity = 0.5
+transform/pos = Vector2( 49, -61 )
+transform/scale = Vector2( 0.35, 0.35 )
+normal = ExtResource( 6 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = false
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="Button2" type="TouchScreenButton" parent="Control/HBoxContainer"]
+
+transform/pos = Vector2( 232, 3 )
+transform/scale = Vector2( 0.4, 0.4 )
+normal = ExtResource( 7 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/HBoxContainer"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/New Anim" = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="menuin" parent="." instance=ExtResource( 8 )]
+
+[node name="controlinfo" parent="." instance=ExtResource( 9 )]
+
+editor/display_folded = false
+
+[node name="Popup2" parent="." instance=ExtResource( 10 )]
+
+[node name="ConfirmationDialog" parent="." instance=ExtResource( 11 )]
+
+[connection signal="pressed" from="Control/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+
+[connection signal="pressed" from="Control/HBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+
+[connection signal="pressed" from="Control/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+
+[connection signal="pressed" from="menuin/VBoxContainer/Label2" to="." method="_on_Label2_pressed"]
+
+[connection signal="pressed" from="menuin/VBoxContainer/Label" to="." method="_on_Label_pressed"]
+
+[connection signal="pressed" from="menuin/VBoxContainer/backmain" to="." method="_on_backmain_pressed"]
+
+[connection signal="pressed" from="menuin/LinkButton" to="." method="_on_LinkButton_pressed"]
+
+[connection signal="pressed" from="controlinfo/back " to="." method="_on_back__pressed"]
+
+[connection signal="pressed" from="Popup2/backmenu" to="." method="_on_backmenu_pressed"]
+
+[connection signal="pressed" from="Popup2/next" to="." method="_on_next_pressed"]
+
+[connection signal="pressed" from="Popup2/previous" to="." method="_on_previous_pressed"]
+
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]
+
+
+[editable path="menuin"]
+[editable path="controlinfo"]
+[editable path="Popup2"]
