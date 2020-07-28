@@ -1,0 +1,312 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://scene/guide.gd" type="Script" id=1]
+[ext_resource path="res://asset/word.png" type="Texture" id=2]
+[ext_resource path="res://asset/crossmenu.png" type="Texture" id=3]
+[ext_resource path="res://font/Lobster_1.3.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://font/KRDEV160.TTF" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 22
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 250, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -250, 0 ) ]
+}
+
+[node name="guide" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 250.0
+margin/top = 0.0
+margin/right = 290.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 112.5, 200 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="cross" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 178, -1.00001 )
+transform/scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="dontshowagain" type="LinkButton" parent="."]
+
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 70.0
+margin/top = 355.0
+margin/right = 203.0
+margin/bottom = 389.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.00459909, 0.0390625, 0.00167847, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Don't Show It Again"
+
+[node name="Label" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k 
+
+D;k vki ;s tkurs gs fd flQZ 3000 ,sls 'kCn gs tks gesa 90 çfr'kr bafXy'k lh[kk ldrs gSA bl çksxzke esa ge ogh 3000 'kCn bl rjhds ls lh[ksaxs] ftlls dh ge mUgsa ;kn dj lds vkSj lkFk gh 8000 Msyh ç;ksx esa vkus okys okD;ksa dks lh[ksaxsA bl ,si dks baVjSfDVo cukus ds fy, bls xse dh rjg cuk;k x;k gsA "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label1" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k 
+
+gj 'kCn ij ,d okD; Lo;a cukus fd dksf'k'k djs]ftlls fd oks vkidks ;kn jgsA 
+gj fnu 5 u, 'kCn lh[ks vkSj mUgsa ;kn djus fd dksf'k'k djsA 
+fiNys lh[ks 'kCnks dks ;kn j[kus ds fy, fDot dk ç;ksx djsA"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k 
+
+okD; dk ifjorZu ns[kus ls igys Lo;a mls ifjofrZr djus fd dksf'k'k djsA"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label3" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k
+
+bl eksM esa 3000 okD;ksa fd fDot gs tks fd çSfDVl ds fy, cukbZ xbZ gsA "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label4" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k
+
+bl eksM esa 3000 okD;ksa fd fDot gs tks fd çSfDVl ds fy, cukbZ xbZ gsA "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label5" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k
+
+vkxs ds ysoy ds fy, ,i dks viMsV djsA "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label6" type="Label" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+rect/scale = Vector2( 0.4, 0.4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 20.0
+margin/right = 486.0
+margin/bottom = 861.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.03125, 0.00195313, 0.00195313, 1 )
+text = "funsZ'k
+
+vxj bl çksxzke ls vkidks enn feyh gks rks Iys LVksj ij 
+jsV djds viuk vuqHko t:j 'ks;j djsA "
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="rateuss" type="Button" parent="Label6"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 172.0
+margin/top = 663.0
+margin/right = 233.0
+margin/bottom = 683.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Rate Us"
+flat = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/animin = SubResource( 3 )
+anims/animout = SubResource( 4 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[connection signal="pressed" from="cross" to="." method="_on_cross_pressed"]
+
+[connection signal="pressed" from="dontshowagain" to="." method="_on_dontshowagain_pressed"]
+
+[connection signal="pressed" from="Label6/rateuss" to="." method="_on_rateuss_pressed"]
+
+

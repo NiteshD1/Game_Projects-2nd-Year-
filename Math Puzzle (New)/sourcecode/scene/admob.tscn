@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scene/admob0.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "3D"
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Label" type="Label" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 0.9, 0.9 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 44.0
+margin/top = 355.0
+margin/right = 194.0
+margin/bottom = 383.0
+custom_colors/font_color = Color( 0.960938, 0.954457, 0.91214, 1 )
+text = "No Internet Connection"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

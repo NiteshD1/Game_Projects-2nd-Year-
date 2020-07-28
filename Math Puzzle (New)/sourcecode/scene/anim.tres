@@ -1,0 +1,21 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "New Anim (2)"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/HBoxContainer/Button3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0110588, 0.0166667, 0.994431, 0.88949 ), Color( 0.88949, 0.911098, 0.911098, 0.88949 ), Color( 0.0165882, 0.0277647, 1, 0.922667 ) ]
+}
+
