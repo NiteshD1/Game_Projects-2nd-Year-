@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sarrow.wav-7006b44161d646e31c3f4284c2427434.sample"
+
+[deps]
+
+source_file="res://audio/sarrow.wav"
+dest_files=[ "res://.import/sarrow.wav-7006b44161d646e31c3f4284c2427434.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

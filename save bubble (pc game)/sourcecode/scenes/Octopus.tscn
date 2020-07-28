@@ -1,0 +1,251 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://scripts/RigidBody2D.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Silvercoin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Lifepower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Invisiblepower.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Powerups.tscn" type="PackedScene" id=6]
+[ext_resource path="res://image/octopus3.png" type="Texture" id=7]
+[ext_resource path="res://image/octopus4.png" type="Texture" id=8]
+[ext_resource path="res://image/octopus5.png" type="Texture" id=9]
+[ext_resource path="res://image/fog.png" type="Texture" id=10]
+[ext_resource path="res://CollisionShape2D.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, -10, -15, 138.961, 23.1001, 0, 0, 50.999, -25.0019, 220.961, -54.8999, 0, 0, 24, -12, 323.961, -71.8999, 0, 0, 0, 0, 499.961, -48.8999, -6.00244, -63.9998, 11.0034, 89.9996, 580.961, 44.1001, 0, 0, -40.9972, 73.0016, 526.961, 173.1, 0, 0, -109.998, 40.0042, 351.961, 267.1, 0, 0, -33.0027, -69.9987, 191.961, 221.1, 0, 0, 53.9961, -102.002, 208.961, 92.1001, 0, 0, 19.0034, 87.9993, 314.961, 35.1001, 0, 0, 65.9993, -19.0025, 410.961, 120.1, 0, 0, -19.0014, -37.9993, 449.961, 29.1001, 0, 0, -89.0008, -21.9966, 348.961, -19.8999, 9.9992, -21.0004, -24.9961, 102.001, 222.961, 13.1001, 34.0002, 4.9987, -31.0018, -47.9988, 121.508, 134.095, 0, 0, -3, -5, 124.961, 44.1001, 0, 0, 0, 0, 136.961, 24.1001, 0, 0, 0, 0, 122.961, 41.1001 )
+}
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="Curve" id=3]
+
+min_value = -360.0
+max_value = 360.0
+bake_resolution = 100
+_data = [ Vector2( 0, 286.172 ), 0.0, 0.0, 0, 0, Vector2( 0.992337, -270.703 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0.00032359, 0.263672 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.650391 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+
+flags = 4
+width = 2048
+curve = SubResource( 5 )
+
+[sub_resource type="Gradient" id=7]
+
+offsets = PoolRealArray( 0, 0.035503, 0.87574, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.902344, 0.824799, 0.824799, 0.0221176, 0.298039, 0.298039, 0.298039, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=8]
+
+flags = 4
+gradient = SubResource( 7 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=9]
+
+render_priority = 0
+trail_divisor = 1
+trail_color_modifier = SubResource( 8 )
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 100.68
+flatness = 0.0
+gravity = Vector3( 0, 299, 0 )
+initial_velocity = 55.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 1.0
+angle_curve = SubResource( 4 )
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 6 )
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 55.0
+anim_speed_random = 0.0
+anim_offset = 1.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Animation", "Emission Shape", "Gravity", "Initial Velocity", "Orbit Velocity", "Scale", "Spread", "Trail" ]
+
+[sub_resource type="LargeTexture" id=10]
+
+flags = 0
+_data = [ Vector2( 0, 0 ) ]
+
+[sub_resource type="Curve2D" id=11]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -119.21, 29.73, 0, 0, 0, 0, -97.2105, -27.27, 0, 0, 0, 0, -36.2105, -44.27, 0, 0, 0, 0, 37.7895, -19.27, 0, 0, 0, 0, 67.7895, 47.73, 0, 0, 0, 0, 25.7895, 88.73, 0, 0, 0, 0, -57.2105, 104.73, 0, 0, 0, 0, -122.21, 75.73, 0, 0, 0, 0, -120.21, 29.73, 0, 0, 0, 0, -119.21, 29.73, 0, 0, 0, 0, -118.21, 28.73, 0, 0, 0, 0, -118.21, 28.73, 0, 0, 0, 0, -120.21, 26.73, 0, 0, 0, 0, -120.21, 26.73, 0, 0, 0, 0, -120.21, 23.73, 0, 0, 0, 0, -117.21, 30.73, 0, 0, 0, 0, -119.21, 29.73, 0, 0, 0, 0, -123.21, 26.73, 0, 0, 0, 0, -119.21, 19.73 )
+}
+
+[sub_resource type="CircleShape2D" id=12]
+
+custom_solver_bias = 0.0
+radius = 9.81598
+
+[node name="Octopus" type="Area2D" groups=[
+"enemy",
+]]
+
+position = Vector2( 305, 268 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+Gcoin = ExtResource( 2 )
+Scoin = ExtResource( 3 )
+Plife = ExtResource( 4 )
+Pinvisible = ExtResource( 5 )
+Pshield = ExtResource( 6 )
+Shield = null
+
+[node name="Path2D" type="Path2D" parent="." index="0"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+rotation = 3.81358e-005
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( 138.961, 23.1001 )
+rotation = -1.69171
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="Sprite" type="AnimatedSprite" parent="Path2D/PathFollow2D" index="0"]
+
+position = Vector2( 34.2268, -127.538 )
+rotation = 1.69167
+frames = SubResource( 2 )
+animation = "New Anim"
+frame = 2
+playing = true
+offset = Vector2( -9.22601, -1.5067 )
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="Particles2D" type="Particles2D" parent="Path2D/PathFollow2D/Sprite" index="0"]
+
+modulate = Color( 0.791724, 0.780579, 0.984375, 1 )
+position = Vector2( -3.22601, 32.4933 )
+emitting = true
+amount = 200
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 0.98
+explosiveness = 0.4
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 9 )
+texture = ExtResource( 10 )
+normal_map = SubResource( 10 )
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite" index="1" groups=[
+"enemy",
+]]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" parent="Path2D/PathFollow2D/Sprite/Area2D" index="0" instance=ExtResource( 11 )]
+
+polygon = PoolVector2Array( -79.7864, 36.4968, -15.1201, 58.5028, -15.0047, 115.511, -14.7628, 228.823, 72.4439, 216.175, 33.9981, 51.2641, 76.0396, 48.9161, 85.6592, 9.06064, 86.5281, -46.9326, -59.2991, -59.1969, -85.5908, -40.6026, -32.28, 4.23004 )
+
+[node name="Path2D2" type="Path2D" parent="." index="1"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( 36, -30 )
+curve = SubResource( 11 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" index="0"]
+
+position = Vector2( -119.21, 29.73 )
+rotation = -1.20246
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+visible = false
+shape = SubResource( 12 )
+disabled = true
+
+[connection signal="area_entered" from="." to="." method="_on_Octopus_area_entered"]
+
+[connection signal="area_entered" from="Path2D/PathFollow2D/Sprite/Area2D" to="." method="_on_Area2D_area_entered"]
+
+

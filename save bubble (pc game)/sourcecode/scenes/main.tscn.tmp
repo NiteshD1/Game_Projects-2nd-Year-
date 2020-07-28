@@ -1,0 +1,233 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://image/main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Mob.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Octopus.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Arrow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Silvercoin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Lifepower.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Invisiblepower.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Powerups.tscn" type="PackedScene" id=9]
+[ext_resource path="res://image/background.png" type="Texture" id=10]
+[ext_resource path="res://scenes/Control.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Guide.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://image/shield.png" type="Texture" id=14]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -53.5, -56.5, 0, 0, 0, 0, 5281.2, -79.5, 0, 0, 0, 0, 5254.2, 3507.86, 0, 0, 0, 0, -84.0532, 3509.86, 0, 0, 0, 0, -54.0532, -59.3893 )
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 119.611
+
+[node name="main" type="Node2D" index="0"]
+
+position = Vector2( 1, 0 )
+script = ExtResource( 1 )
+Fish = ExtResource( 2 )
+Octo = ExtResource( 3 )
+Arrow = ExtResource( 4 )
+Gcoin = ExtResource( 5 )
+Scoin = ExtResource( 6 )
+Plife = ExtResource( 7 )
+Pinvisible = ExtResource( 8 )
+Pshield = ExtResource( 9 )
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 5184.0
+margin_bottom = 3456.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Node2D" parent="." index="1"]
+
+position = Vector2( 202, 83 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Fish" type="Timer" parent="Timer" index="0"]
+
+process_mode = 1
+wait_time = 0.8
+one_shot = false
+autostart = false
+
+[node name="Octo" type="Timer" parent="Timer" index="1"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = false
+
+[node name="Arrow" type="Timer" parent="Timer" index="2"]
+
+process_mode = 1
+wait_time = 15.0
+one_shot = false
+autostart = false
+
+[node name="Start" type="Timer" parent="Timer" index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[node name="Coin" type="Timer" parent="Timer" index="4"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = false
+
+[node name="Power" type="Timer" parent="Timer" index="5"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = false
+
+[node name="Stime" type="Timer" parent="Timer" index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Path2D" type="Path2D" parent="." index="2"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( -53.5, -56.5 )
+rotation = -0.00431152
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Control" parent="CanvasLayer" index="0" instance=ExtResource( 11 )]
+
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Node2D" parent="CanvasLayer" index="1" instance=ExtResource( 12 )]
+
+position = Vector2( -3, -32 )
+
+[node name="Player" parent="." index="4" instance=ExtResource( 13 )]
+
+position = Vector2( 475.2, 289.124 )
+
+[node name="Shield" type="Area2D" parent="Player" index="3" groups=[
+"shield",
+"player",
+]]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 23
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="Player/Shield" index="0"]
+
+position = Vector2( -8, -6 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Shield" index="1"]
+
+visible = false
+position = Vector2( -10, -8 )
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="4"]
+
+position = Vector2( 24.2721, -4.98773 )
+rotation = -1.56801
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = 0
+limit_top = 0
+limit_right = 5184
+limit_bottom = 3456
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Editor", "Limit", "Pause", "Transform" ]
+
+[connection signal="timeout" from="Timer/Fish" to="." method="_on_Fish_timeout"]
+
+[connection signal="timeout" from="Timer/Octo" to="." method="_on_Octo_timeout"]
+
+[connection signal="timeout" from="Timer/Arrow" to="." method="_on_Arrow_timeout"]
+
+[connection signal="timeout" from="Timer/Start" to="." method="_on_Start_timeout"]
+
+[connection signal="timeout" from="Timer/Coin" to="." method="_on_Coin_timeout"]
+
+[connection signal="timeout" from="Timer/Power" to="." method="_on_Power_timeout"]
+
+[connection signal="timeout" from="Timer/Stime" to="." method="_on_Stime_timeout"]
+
+[connection signal="end" from="CanvasLayer/Control" to="Player" method="_on_Control_end"]
+
+[connection signal="reload" from="CanvasLayer/Control" to="." method="_on_Control_reload"]
+
+

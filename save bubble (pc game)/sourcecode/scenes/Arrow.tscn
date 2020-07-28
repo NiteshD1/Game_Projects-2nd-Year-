@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/Arrow.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Silvercoin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Lifepower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Invisiblepower.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Powerups.tscn" type="PackedScene" id=6]
+[ext_resource path="res://image/arrow.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 281, 10 )
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -282.431, -0.788513, 0, 0, 0, 0, 279.569, 0.211487 )
+}
+
+[node name="Arrow" type="Area2D" groups=[
+"enemy",
+]]
+
+position = Vector2( 188, 104 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+Gcoin = ExtResource( 2 )
+Scoin = ExtResource( 3 )
+Plife = ExtResource( 4 )
+Pinvisible = ExtResource( 5 )
+Pshield = ExtResource( 6 )
+Shield = null
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 100, -8 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( -4, 1 )
+shape = SubResource( 1 )
+
+[node name="Path2D" type="Path2D" parent="." index="2"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( 100, -8 )
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( -282.431, -0.788513 )
+rotation = 0.00177936
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[connection signal="area_entered" from="." to="." method="_on_Arrow_area_entered"]
+
+

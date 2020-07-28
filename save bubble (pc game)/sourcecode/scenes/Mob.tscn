@@ -1,0 +1,196 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://scripts/Mob.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Silvercoin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Lifepower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Invisiblepower.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Powerups.tscn" type="PackedScene" id=6]
+[ext_resource path="res://image/fishl/1.png" type="Texture" id=7]
+[ext_resource path="res://image/fishl/2.png" type="Texture" id=8]
+[ext_resource path="res://image/fishl/3.png" type="Texture" id=9]
+[ext_resource path="res://image/fishl/4.png" type="Texture" id=10]
+[ext_resource path="res://image/fishl/5.png" type="Texture" id=11]
+[ext_resource path="res://image/fishl/6.png" type="Texture" id=12]
+[ext_resource path="res://image/bubble1.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "fl",
+"speed": 5.0
+} ]
+
+[sub_resource type="Gradient" id=2]
+
+offsets = PoolRealArray( 0, 0.5, 0.752941, 0.852941, 0.923529, 1 )
+colors = PoolColorArray( 0.953125, 0.934509, 0.934509, 1, 0.462769, 0.775393, 0.871094, 1, 0.303772, 0.779998, 0.925781, 1, 0.435294, 0.435294, 0.435294, 1, 0.262024, 0.469889, 0.828125, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+
+flags = 4
+gradient = SubResource( 2 )
+width = 2048
+
+[sub_resource type="Curve" id=4]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.231445 ), 0.0, 0.0, 0, 0, Vector2( 0.99356, 0.790039 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+
+flags = 4
+width = 2048
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 44, 33, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+hue_variation = 1.0
+hue_variation_random = 1.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Hue Variation", "Scale", "Spread" ]
+
+[sub_resource type="Curve2D" id=7]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 3.26049, -24.5649, -89.7116, -10.1706, 0, 0, 24.2176, -20.4141, -38.1305, -64.7417, 0, 0, 41.9769, 2.39849, 38.0218, -78.7195, 0, 0, 28.7795, 20.9578, 90.7999, -57.5155, 0, 0, 0, 0, 114.309, -11.0295 )
+}
+
+[sub_resource type="CapsuleShape2D" id=8]
+
+custom_solver_bias = 0.0
+radius = 75.2158
+height = 105.911
+
+[node name="Mob" type="Area2D" groups=[
+"enemy",
+]]
+
+position = Vector2( -1, -1 )
+rotation = -0.0104263
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+Gcoin = ExtResource( 2 )
+Scoin = ExtResource( 3 )
+Plife = ExtResource( 4 )
+Pinvisible = ExtResource( 5 )
+Pshield = ExtResource( 6 )
+Shield = null
+
+[node name="Node2D" type="Node2D" parent="." index="0"]
+
+[node name="fish" type="AnimatedSprite" parent="Node2D" index="0"]
+
+modulate = Color( 0.792969, 0.328339, 0.328339, 1 )
+position = Vector2( -20.978, -2.21884 )
+frames = SubResource( 1 )
+animation = "fl"
+frame = 1
+playing = true
+flip_h = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Particles2D" type="Particles2D" parent="Node2D/fish" index="0"]
+
+position = Vector2( 130.398, 29.0401 )
+emitting = true
+amount = 2
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.4
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 6 )
+texture = ExtResource( 13 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Transform" ]
+
+[node name="Path2D" type="Path2D" parent="Node2D" index="1"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( -29.2695, 27.085 )
+scale = Vector2( 1, 1.01638 )
+curve = SubResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D" index="0"]
+
+position = Vector2( -89.7116, -10.1706 )
+rotation = -1.34545
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+rotation = 1.5708
+shape = SubResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Position2D" type="Position2D" parent="." index="2"]
+
+position = Vector2( 107.265, -24.883 )
+
+[connection signal="area_entered" from="." to="." method="_on_Mob_area_entered"]
+
+

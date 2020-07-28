@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sbubble1.wav-0112b6854d82b3c7212c645a393e43e7.sample"
+
+[deps]
+
+source_file="res://audio/sbubble1.wav"
+dest_files=[ "res://.import/sbubble1.wav-0112b6854d82b3c7212c645a393e43e7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
