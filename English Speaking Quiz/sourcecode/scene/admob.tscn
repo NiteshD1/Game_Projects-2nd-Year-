@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scene/admob.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "3D"
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 40.0
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

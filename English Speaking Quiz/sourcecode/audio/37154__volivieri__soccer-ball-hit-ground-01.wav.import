@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/37154__volivieri__soccer-ball-hit-ground-01.wav-0b52b437e680e56bf738ac5d387c2731.sample"
+
+[deps]
+
+source_file="res://audio/37154__volivieri__soccer-ball-hit-ground-01.wav"
+dest_files=[ "res://.import/37154__volivieri__soccer-ball-hit-ground-01.wav-0b52b437e680e56bf738ac5d387c2731.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

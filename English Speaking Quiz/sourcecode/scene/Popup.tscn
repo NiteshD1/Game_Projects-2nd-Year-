@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scene/AnimationPlayer.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "animin"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 0.7, 1 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -400 ), Vector2( 0, 20 ), Vector2( 0, -8 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "animout"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 15, 0 ), Vector2( -200, 0 ) ]
+}
+
+[node name="Popup" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 112.5, 163 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="back" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 97, 300 )
+transform/scale = Vector2( 0.3, 0.3 )
+normal = null
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="back1" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 97, 300 )
+transform/scale = Vector2( 0.3, 0.3 )
+normal = null
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 1 )]
+
+anims/animin = SubResource( 1 )
+anims/animout = SubResource( 2 )
+
+

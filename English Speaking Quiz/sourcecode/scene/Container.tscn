@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://font/Lemon Jelly Personal Use.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 1 )
+
+[node name="Container" type="Container"]
+
+rect/min_size = Vector2( 120, 300 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 120.0
+margin/bottom = 300.0
+
+[node name="Label3" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 15.0
+margin/right = 65.0
+margin/bottom = 31.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.867903, 0.890625, 0.163513, 1 )
+text = "Explainalation"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label 2" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 36.0
+margin/bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.867903, 0.890625, 0.163513, 1 )
+text = "Answer"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label4" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 42.0
+margin/top = 0.0
+margin/right = 84.0
+margin/bottom = 14.0
+text = "hdghgj"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
