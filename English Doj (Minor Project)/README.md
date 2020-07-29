@@ -33,7 +33,7 @@ https://j.gifs.com/jZ4Q9W.gif
 [![Demo CountPages alpha](https://j.gifs.com/jZ4Q9W.gif)] 
 
 
-- Quiz game to memorize previously learned words.
+- Quiz game is designed to memorize previously learned words in interactive way.
 https://j.gifs.com/GvqnVy.gif
 [![Demo CountPages alpha](https://j.gifs.com/GvqnVy.gif)] 
 
@@ -51,7 +51,7 @@ which is a python build language.
 ### Database
 All the words and sentences are stored in internal storage.
 - Excel sheet is used to store the words and sentences(in both the language Hindi and English).
-- See content of Excel sheet by clicking [here](https://docs.google.com/spreadsheets/d/1g1qLq41PzmExC0aPwrqUqcKEQP5Uw6FICAcgsa7VXA4/edit?usp=sharing)
+- See content of Excel sheet by clicking [**here**](https://docs.google.com/spreadsheets/d/1g1qLq41PzmExC0aPwrqUqcKEQP5Uw6FICAcgsa7VXA4/edit?usp=sharing)
 
 #### Related Link
 - You can find this app on playstore by clicking [**here**](https://play.google.com/store/apps/details?id=org.studyquiz.learnenglish)
