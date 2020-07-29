@@ -5,7 +5,7 @@ This app is made in Game Engine to provide better graphics and animation to make
 ## Core Idea
 This app is created to help the students who want to improve their communication in English Language
 
-    ### Feature
+###    Feature
         - Every Level consist 5 words to learn daily(English to Hindi translation).
         - Learn commonly used sentences and their Hindi to English translations and vice versa.
         - Quiz game to memorize previously learned words.
