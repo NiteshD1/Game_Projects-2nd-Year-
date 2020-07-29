@@ -1,18 +1,17 @@
-# English Doj
-English Doj is a English learning android app made with [**Godot Game Engine**](https://godotengine.org/)
+# Math Riddle
+Math Riddle is a math puzzle android game made with [**Godot Game Engine**](https://godotengine.org/)
 (Godot is a **MIT licensed** open source software for 2d and 3d game development).
-This app is made in Game Engine to provide better graphics and animation to make it more interactive.
+This game is made in Game Engine to provide better graphics and animation to make it more interactive.
 
 ##  Demo
 
 
-https://j.gifs.com/2xB4AN.gif  
+https://j.gifs.com/WLN68X.gif
 
-[![Demo CountPages alpha](https://j.gifs.com/2xB4AN.gif)] 
+[![Demo CountPages alpha](https://j.gifs.com/WLN68X.gif)] 
 
 
-https://j.gifs.com/OMBl2p.gif
-[![Demo CountPages alpha](https://j.gifs.com/OMBl2p.gif)] 
+
          
                                                        
      
@@ -22,24 +21,20 @@ https://j.gifs.com/OMBl2p.gif
                                                         
 
 ## Core Idea
-This app is created to help the students who want to improve their communication in English Language
+This is a small brain storming game for android devices. It consists many mind challenging math puzzle which should be solved in a given time.
+
+https://j.gifs.com/WLN6wX.gif
+
+[![Demo CountPages alpha](https://j.gifs.com/WLN6wX.gif)] 
 
 ###    Feature
-- Every Level consist 5 words to learn daily(English to Hindi translation).
-
-https://j.gifs.com/YWPp9p.gif
-[![Demo CountPages alpha](https://j.gifs.com/YWPp9p.gif)] 
-
-- Learn commonly used sentences and their Hindi to English translations and vice versa.
-
-https://j.gifs.com/jZ4Q9W.gif
-[![Demo CountPages alpha](https://j.gifs.com/jZ4Q9W.gif)] 
+- Every Level consist different math puzzle to challenge your mind. 
 
 
-- The Quiz game is designed to memorize previously learned words in interactive way.
 
-https://j.gifs.com/GvqnVy.gif
-[![Demo CountPages alpha](https://j.gifs.com/GvqnVy.gif)] 
+- Answer of puzzle with full explaination is given.
+
+
 
 ## Technology used
 
@@ -58,5 +53,5 @@ All the words and sentences are stored in internal storage.
 - See content of Excel sheet by clicking [**here**](https://docs.google.com/spreadsheets/d/1g1qLq41PzmExC0aPwrqUqcKEQP5Uw6FICAcgsa7VXA4/edit?usp=sharing)
 
 #### Related Link
-- You can find this app on playstore by clicking [**here**](https://play.google.com/store/apps/details?id=org.studyquiz.learnenglish)
-- Watch demo video on youtube by clicking [**here**](https://youtu.be/qtevjRbByTo)
+
+- Watch demo video on youtube by clicking [**here**](https://youtu.be/LD0q_W7w2p0)
