@@ -1,7 +1,8 @@
 # English Doj
 English Doj is a English learning android app made with **Godot Game Engine**(Godot is a **MIT licensed** open source software for 2d and 3d game development).
 This app is made in Game Engine to provide better graphics and animation to make it more interactive.
--demo
+
+##  Demo
 
 https://j.gifs.com/2xB4AN.gif  
 [![Demo CountPages alpha](https://j.gifs.com/2xB4AN.gif)] 
