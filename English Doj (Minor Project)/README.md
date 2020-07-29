@@ -33,7 +33,7 @@ https://j.gifs.com/jZ4Q9W.gif
 [![Demo CountPages alpha](https://j.gifs.com/jZ4Q9W.gif)] 
 
 
-- The Quiz game is designed to memorize previously learned words in interactive way.
+- The Quiz game is designed to memorize previously learned words in interactive way   .
 https://j.gifs.com/GvqnVy.gif
 [![Demo CountPages alpha](https://j.gifs.com/GvqnVy.gif)] 
 
