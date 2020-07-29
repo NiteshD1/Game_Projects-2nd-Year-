@@ -1,19 +1,16 @@
-# English Doj
-English Doj is a English learning android app made with [**Godot Game Engine**](https://godotengine.org/)
+# English Speaking Quiz
+English Speaking Quiz is a English learning android app made with [**Godot Game Engine**](https://godotengine.org/)
 (Godot is a **MIT licensed** open source software for 2d and 3d game development).
 This app is made in Game Engine to provide better graphics and animation to make it more interactive.
 
 ##  Demo
 
 
-https://j.gifs.com/2xB4AN.gif  
+https://j.gifs.com/Gvq6My.gif  
 
-[![Demo CountPages alpha](https://j.gifs.com/2xB4AN.gif)] 
+[![Demo CountPages alpha](https://j.gifs.com/Gvq6My.gif)] 
 
 
-https://j.gifs.com/OMBl2p.gif
-[![Demo CountPages alpha](https://j.gifs.com/OMBl2p.gif)] 
-         
                                                        
      
                                                                                                           
@@ -22,24 +19,19 @@ https://j.gifs.com/OMBl2p.gif
                                                         
 
 ## Core Idea
-This app is created to help the students who want to improve their communication in English Language
+This app is created to help the students who want to improve their general concept in English Language(such as commonly used sentence in english and some grammar concept). 
+
+https://j.gifs.com/71K3Xw.gif
+
+[![Demo CountPages alpha](https://j.gifs.com/71K3Xw.gif)] 
 
 ###    Feature
-- Every Level consist 5 words to learn daily(English to Hindi translation).
-
-https://j.gifs.com/YWPp9p.gif
-[![Demo CountPages alpha](https://j.gifs.com/YWPp9p.gif)] 
-
-- Learn commonly used sentences and their Hindi to English translations and vice versa.
-
-https://j.gifs.com/jZ4Q9W.gif
-[![Demo CountPages alpha](https://j.gifs.com/jZ4Q9W.gif)] 
 
 
-- The Quiz game is designed to memorize previously learned words in interactive way.
 
-https://j.gifs.com/GvqnVy.gif
-[![Demo CountPages alpha](https://j.gifs.com/GvqnVy.gif)] 
+- The Quiz game is designed to learn very important concepts of english language in interactive way.
+- Different level is designed based upon difficulty level.
+
 
 ## Technology used
 
@@ -58,5 +50,5 @@ All the words and sentences are stored in internal storage.
 - See content of Excel sheet by clicking [**here**](https://docs.google.com/spreadsheets/d/1g1qLq41PzmExC0aPwrqUqcKEQP5Uw6FICAcgsa7VXA4/edit?usp=sharing)
 
 #### Related Link
-- You can find this app on playstore by clicking [**here**](https://play.google.com/store/apps/details?id=org.studyquiz.learnenglish)
-- Watch demo video on youtube by clicking [**here**](https://youtu.be/qtevjRbByTo)
+
+- Watch demo video on youtube by clicking [**here**](https://youtu.be/AQwoG9oz5VA)
