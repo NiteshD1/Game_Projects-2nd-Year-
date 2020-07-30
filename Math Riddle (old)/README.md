@@ -47,10 +47,7 @@ https://j.gifs.com/WLN6wX.gif
 which is a python build language.
 - Sound is taken from different websites and all the sounds are royalty free sound.
 
-### Database
-All the words and sentences are stored in internal storage.
-- Excel sheet is used to store the words and sentences(in both the language Hindi and English).
-- See content of Excel sheet by clicking [**here**](https://docs.google.com/spreadsheets/d/1g1qLq41PzmExC0aPwrqUqcKEQP5Uw6FICAcgsa7VXA4/edit?usp=sharing)
+
 
 #### Related Link
 
