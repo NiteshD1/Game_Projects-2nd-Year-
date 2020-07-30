@@ -14,8 +14,6 @@ https://j.gifs.com/2xB4AN.gif
 https://j.gifs.com/OMBl2p.gif
 [![Demo CountPages alpha](https://j.gifs.com/OMBl2p.gif)] 
          
-                                                       
-     
                                                                                                           
                                                         
                                                       
