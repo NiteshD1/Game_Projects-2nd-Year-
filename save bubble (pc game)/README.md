@@ -1,18 +1,16 @@
-# English Doj
-English Doj is a English learning android app made with [**Godot Game Engine**](https://godotengine.org/)
+# Save Bubble
+Save Bubble is a small pc game made with [**Godot Game Engine**](https://godotengine.org/)
 (Godot is a **MIT licensed** open source software for 2d and 3d game development).
-This app is made in Game Engine to provide better graphics and animation to make it more interactive.
+
 
 ##  Demo
 
 
-https://j.gifs.com/2xB4AN.gif  
-
-[![Demo CountPages alpha](https://j.gifs.com/2xB4AN.gif)] 
 
 
-https://j.gifs.com/OMBl2p.gif
-[![Demo CountPages alpha](https://j.gifs.com/OMBl2p.gif)] 
+
+https://j.gifs.com/ANknz3.gif
+[![Demo CountPages alpha](https://j.gifs.com/ANknz3.gif)] 
          
                                                        
      
@@ -22,24 +20,15 @@ https://j.gifs.com/OMBl2p.gif
                                                         
 
 ## Core Idea
-This app is created to help the students who want to improve their communication in English Language
+There is a bubble in game, you need to save it from different obstacles such as fish, octopus and arrows. Also there is a gems in game you need to collect the gems fro better score.
 
-###    Feature
-- Every Level consist 5 words to learn daily(English to Hindi translation).
+https://j.gifs.com/ROGgqO.gif
+[![Demo CountPages alpha](https://j.gifs.com/ROGgqO.gif)] 
 
-https://j.gifs.com/YWPp9p.gif
-[![Demo CountPages alpha](https://j.gifs.com/YWPp9p.gif)] 
-
-- Learn commonly used sentences and their Hindi to English translations and vice versa.
-
-https://j.gifs.com/jZ4Q9W.gif
-[![Demo CountPages alpha](https://j.gifs.com/jZ4Q9W.gif)] 
+###    Controls
+- Move Right, Left, Up and Down from the ight, Left, Up and Down key of the keyboard.
 
 
-- The Quiz game is designed to memorize previously learned words in interactive way.
-
-https://j.gifs.com/GvqnVy.gif
-[![Demo CountPages alpha](https://j.gifs.com/GvqnVy.gif)] 
 
 ## Technology used
 
@@ -52,11 +41,8 @@ https://j.gifs.com/GvqnVy.gif
 which is a python build language.
 - Sound is taken from different websites and all the sounds are royalty free sound.
 
-### Database
-All the words and sentences are stored in internal storage.
-- Excel sheet is used to store the words and sentences(in both the language Hindi and English).
-- See content of Excel sheet by clicking [**here**](https://docs.google.com/spreadsheets/d/1g1qLq41PzmExC0aPwrqUqcKEQP5Uw6FICAcgsa7VXA4/edit?usp=sharing)
+
 
 #### Related Link
-- You can find this app on playstore by clicking [**here**](https://play.google.com/store/apps/details?id=org.studyquiz.learnenglish)
-- Watch demo video on youtube by clicking [**here**](https://youtu.be/qtevjRbByTo)
+
+- Watch demo video on youtube by clicking [**here**](https://youtu.be/fYgp73drA8A)
