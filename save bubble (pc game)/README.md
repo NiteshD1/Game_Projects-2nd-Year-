@@ -30,13 +30,10 @@ https://j.gifs.com/ROGgqO.gif
 
 
 
-## Technology used
+## Technology and tools used
 
-### Front End Development 
 - All the graphics are made with photoshop(such as Images and Buttons). 
 - All the animation is made with [**Godot Game Engine**](https://godotengine.org/). 
-
-### Back End Development
 - The language used in the above app is [**Gdscript**](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html) 
 which is a python build language.
 - Sound is taken from different websites and all the sounds are royalty free sound.
