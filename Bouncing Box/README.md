@@ -3,14 +3,10 @@ Bouncing Box is a casual android game which is made with [**Godot Game Engine**]
 (Godot is a **MIT licensed** open source software for 2d and 3d game development).
 
 
-##  Demo
+##  Preview
 
 
-
-
-
-https://j.gifs.com/K1xrOR.gif
-[![Demo CountPages alpha](https://j.gifs.com/K1xrOR.gif)] 
+![BouncingBox Preview](BouncingBoxPreview.gif)
          
                                                        
      
