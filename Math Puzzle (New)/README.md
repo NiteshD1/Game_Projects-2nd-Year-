@@ -3,12 +3,10 @@ It is a math puzzle android game made with [**Godot Game Engine**](https://godot
 (Godot is a **MIT licensed** open source software for 2d and 3d game development).
 This game is a better version of my previous game "Math Riddle".
 
-##  Demo
+##  Preview
 
 
-https://j.gifs.com/D1nkJA.gif
-
-[![Demo CountPages alpha](https://j.gifs.com/D1nkJA.gif)] 
+![Testyo Demo](MathPuzzleDemo.gif)
 
 
 
